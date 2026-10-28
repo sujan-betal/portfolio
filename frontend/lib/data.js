@@ -28,7 +28,7 @@ export const projects = [
   {
     title: "Food Recipe App",
     category: "Web app",
-    image: "/projects/food-recipe.png",
+    image: "/projects/flavorburst-recipe.png",
     description: "A recipe discovery app built with JavaScript, with a live version available to explore.",
     tags: ["JavaScript", "React"],
     demoUrl: "https://food-recipe-app-two-tawny.vercel.app",
@@ -36,7 +36,7 @@ export const projects = [
   {
     title: "SpendWise Expense Tracker",
     category: "Full-stack app",
-    image: "/projects/expense-tracker.png",
+    image: "/projects/spendwise-dashboard.png",
     description:
       "A full-stack expense tracker with dashboards, spending charts, categories, and budget tools.",
     tags: ["React", "FastAPI", "PostgreSQL", "Docker"],
@@ -45,8 +45,7 @@ export const projects = [
   {
     title: "Spice & Soul Restaurant",
     category: "Restaurant app",
-    mark: "S",
-    thumb: "thumb-c",
+    image: "/projects/spicesoul-menu.png",
     description:
       "A restaurant ordering and management app with menu filters, cart, order placement, and an admin dashboard.",
     tags: ["PHP", "MySQL", "JavaScript"],
@@ -54,8 +53,7 @@ export const projects = [
   {
     title: "TechPulse Electronic Shop",
     category: "E-commerce",
-    mark: "T",
-    thumb: "thumb-d",
+    image: "/projects/techpulse-storefront.png",
     description:
       "A full-stack electronics store with product search, shopping cart, checkout, order tracking, and admin tools.",
     tags: ["Next.js", "TypeScript", "FastAPI", "SQL"],
@@ -63,7 +61,7 @@ export const projects = [
   {
     title: "AURA Medical Center",
     category: "Hospital management",
-    image: "/projects/hospital-management.png",
+    image: "/projects/aura-dashboard.png",
     description:
       "A hospital operations platform for appointments, billing, bed tracking, doctor payouts, and patient care.",
     tags: ["Next.js", "FastAPI", "Flutter", "PostgreSQL"],
@@ -72,41 +70,43 @@ export const projects = [
   {
     title: "Job Tracker",
     category: "Productivity app",
-    image: "/projects/job-tracker.png",
+    image: "/projects/jobtracker-dashboard.png",
     description: "A web app for organizing job applications and tracking your job search.",
     tags: ["React", "TypeScript"],
     demoUrl: "https://job-tracker-lac-rho.vercel.app",
-  },
-  {
-    title: "ATM Management System",
-    category: "Application",
-    mark: "A",
-    thumb: "thumb-e",
-    description: "An ATM management system application with account and transaction management.",
-    tags: ["ATM", "Management system"],
   },
 ];
 
 export const gallery = [
   {
     title: "Food Recipe App",
-    page: "Landing page",
-    image: "/projects/food-recipe.png",
+    page: "Recipe detail",
+    image: "/projects/flavorburst-recipe.png",
   },
   {
     title: "SpendWise Expense Tracker",
-    page: "Sign-in screen",
-    image: "/projects/expense-tracker.png",
+    page: "Dashboard",
+    image: "/projects/spendwise-dashboard.png",
+  },
+  {
+    title: "Spice & Soul Restaurant",
+    page: "Menu",
+    image: "/projects/spicesoul-menu.png",
+  },
+  {
+    title: "TechPulse Electronic Shop",
+    page: "Storefront",
+    image: "/projects/techpulse-storefront.png",
   },
   {
     title: "AURA Medical Center",
-    page: "Landing & sign-in",
-    image: "/projects/hospital-management.png",
+    page: "Admin dashboard",
+    image: "/projects/aura-dashboard.png",
   },
   {
     title: "Job Tracker",
-    page: "Sign-in screen",
-    image: "/projects/job-tracker.png",
+    page: "Dashboard",
+    image: "/projects/jobtracker-dashboard.png",
   },
 ];
 
@@ -135,3 +135,4 @@ export const testimonials = [
     accent: true,
   },
 ];
+
