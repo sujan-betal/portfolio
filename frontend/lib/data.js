@@ -1,6 +1,7 @@
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -27,22 +28,18 @@ export const projects = [
   {
     title: "Food Recipe App",
     category: "Web app",
-    mark: "F",
-    thumb: "thumb-a",
+    image: "/projects/food-recipe.png",
     description: "A recipe discovery app built with JavaScript, with a live version available to explore.",
     tags: ["JavaScript", "React"],
-    repoUrl: "https://github.com/sujan-betal/Food_recipe-app",
     demoUrl: "https://food-recipe-app-two-tawny.vercel.app",
   },
   {
     title: "SpendWise Expense Tracker",
     category: "Full-stack app",
-    mark: "S",
-    thumb: "thumb-b",
+    image: "/projects/expense-tracker.png",
     description:
       "A full-stack expense tracker with dashboards, spending charts, categories, and budget tools.",
     tags: ["React", "FastAPI", "PostgreSQL", "Docker"],
-    repoUrl: "https://github.com/sujan-betal/expense-tracker-fullstack",
     demoUrl: "https://expense-tracker-fullstack-theta.vercel.app",
   },
   {
@@ -53,7 +50,6 @@ export const projects = [
     description:
       "A restaurant ordering and management app with menu filters, cart, order placement, and an admin dashboard.",
     tags: ["PHP", "MySQL", "JavaScript"],
-    repoUrl: "https://github.com/sujan-betal/resturant",
   },
   {
     title: "TechPulse Electronic Shop",
@@ -63,27 +59,22 @@ export const projects = [
     description:
       "A full-stack electronics store with product search, shopping cart, checkout, order tracking, and admin tools.",
     tags: ["Next.js", "TypeScript", "FastAPI", "SQL"],
-    repoUrl: "https://github.com/sujan-betal/ELECTRONIC-SHOP",
   },
   {
     title: "AURA Medical Center",
     category: "Hospital management",
-    mark: "A",
-    thumb: "thumb-e",
+    image: "/projects/hospital-management.png",
     description:
       "A hospital operations platform for appointments, billing, bed tracking, doctor payouts, and patient care.",
     tags: ["Next.js", "FastAPI", "Flutter", "PostgreSQL"],
-    repoUrl: "https://github.com/sujan-betal/Hospital-management",
     demoUrl: "https://hospital-management-seven-sigma.vercel.app",
   },
   {
     title: "Job Tracker",
     category: "Productivity app",
-    mark: "J",
-    thumb: "thumb-f",
+    image: "/projects/job-tracker.png",
     description: "A web app for organizing job applications and tracking your job search.",
     tags: ["React", "TypeScript"],
-    repoUrl: "https://github.com/sujan-betal/job-tracker",
     demoUrl: "https://job-tracker-lac-rho.vercel.app",
   },
   {
@@ -91,9 +82,41 @@ export const projects = [
     category: "Application",
     mark: "A",
     thumb: "thumb-e",
-    description: "An ATM management system project from my GitHub portfolio.",
+    description: "An ATM management system application with account and transaction management.",
     tags: ["ATM", "Management system"],
-    repoUrl: "https://github.com/sujan-betal/ATM-MANAGEMENT-SYSTEM",
+  },
+];
+
+export const gallery = [
+  {
+    title: "Food Recipe App",
+    page: "Landing page",
+    image: "/projects/food-recipe.png",
+  },
+  {
+    title: "Food Recipe App",
+    page: "Category page",
+    image: "/projects/food-recipe-category.png",
+  },
+  {
+    title: "Food Recipe App",
+    page: "Recipe details",
+    image: "/projects/food-recipe-recipe.png",
+  },
+  {
+    title: "SpendWise Expense Tracker",
+    page: "Sign-in screen",
+    image: "/projects/expense-tracker.png",
+  },
+  {
+    title: "AURA Medical Center",
+    page: "Landing & sign-in",
+    image: "/projects/hospital-management.png",
+  },
+  {
+    title: "Job Tracker",
+    page: "Sign-in screen",
+    image: "/projects/job-tracker.png",
   },
 ];
 

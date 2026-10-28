@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/lib/data";
 import { ArrowUpRight } from "./Icons";
 import Counter from "./Counter";
@@ -25,9 +26,23 @@ export default function Work() {
               delay={(index % 3) * 70}
             >
               <article className="project-card">
-                <div className={`project-thumb ${project.thumb}`}>
+                <div
+                  className={`project-thumb ${
+                    project.image ? "has-image" : project.thumb
+                  }`}
+                >
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="thumb-img"
+                    />
+                  ) : (
+                    <span className="thumb-mark">{project.mark}</span>
+                  )}
                   <span className="thumb-tag">{project.category}</span>
-                  <span className="thumb-mark">{project.mark}</span>
                 </div>
                 <div className="project-body">
                   <h3>{project.title}</h3>
@@ -37,17 +52,8 @@ export default function Work() {
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
-                  <div className="project-actions">
-                    <a
-                      href={project.repoUrl}
-                      className="project-link"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View on GitHub
-                      <ArrowUpRight />
-                    </a>
-                    {project.demoUrl && (
+                  {project.demoUrl && (
+                    <div className="project-actions">
                       <a
                         href={project.demoUrl}
                         className="project-link project-demo"
@@ -57,8 +63,8 @@ export default function Work() {
                         Live demo
                         <ArrowUpRight />
                       </a>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </article>
             </Reveal>
