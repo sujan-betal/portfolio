@@ -44,8 +44,8 @@ export default function Gallery() {
           <p className="eyebrow">Project gallery</p>
           <h2>Screens from the products I&apos;ve built.</h2>
           <p className="section-note">
-            Landing pages, category views and app screens across {gallery.length}{" "}
-            captured views. Select any screen to view it full size.
+            One screen from each featured project. Select any screen to view it
+            full size.
           </p>
         </Reveal>
 

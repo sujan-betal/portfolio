@@ -94,16 +94,6 @@ export const gallery = [
     image: "/projects/food-recipe.png",
   },
   {
-    title: "Food Recipe App",
-    page: "Category page",
-    image: "/projects/food-recipe-category.png",
-  },
-  {
-    title: "Food Recipe App",
-    page: "Recipe details",
-    image: "/projects/food-recipe-recipe.png",
-  },
-  {
     title: "SpendWise Expense Tracker",
     page: "Sign-in screen",
     image: "/projects/expense-tracker.png",
