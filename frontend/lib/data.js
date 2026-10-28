@@ -80,6 +80,11 @@ export const projects = [
 export const gallery = [
   {
     title: "Food Recipe App",
+    page: "Home",
+    image: "/projects/flavorburst-home.png",
+  },
+  {
+    title: "Food Recipe App",
     page: "Recipe detail",
     image: "/projects/flavorburst-recipe.png",
   },
@@ -87,6 +92,16 @@ export const gallery = [
     title: "SpendWise Expense Tracker",
     page: "Dashboard",
     image: "/projects/spendwise-dashboard.png",
+  },
+  {
+    title: "SpendWise Expense Tracker",
+    page: "Expenses",
+    image: "/projects/spendwise-expenses.png",
+  },
+  {
+    title: "Spice & Soul Restaurant",
+    page: "Home",
+    image: "/projects/spicesoul-home.png",
   },
   {
     title: "Spice & Soul Restaurant",
@@ -99,14 +114,29 @@ export const gallery = [
     image: "/projects/techpulse-storefront.png",
   },
   {
+    title: "TechPulse Electronic Shop",
+    page: "Products",
+    image: "/projects/techpulse-products.png",
+  },
+  {
     title: "AURA Medical Center",
     page: "Admin dashboard",
     image: "/projects/aura-dashboard.png",
   },
   {
+    title: "AURA Medical Center",
+    page: "Wards & beds",
+    image: "/projects/aura-wards.png",
+  },
+  {
     title: "Job Tracker",
     page: "Dashboard",
     image: "/projects/jobtracker-dashboard.png",
+  },
+  {
+    title: "Job Tracker",
+    page: "Applications",
+    image: "/projects/jobtracker-applications.png",
   },
 ];
 

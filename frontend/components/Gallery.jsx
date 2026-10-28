@@ -1,12 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gallery } from "@/lib/data";
 import Reveal from "./Reveal";
 
 export default function Gallery() {
   const [active, setActive] = useState(null);
+  const closeButtonRef = useRef(null);
+  const returnFocusRef = useRef(null);
 
   const close = useCallback(() => setActive(null), []);
   const step = useCallback((direction) => {
@@ -17,12 +19,38 @@ export default function Gallery() {
   }, []);
 
   useEffect(() => {
-    if (active === null) return;
+    if (active === null) {
+      returnFocusRef.current?.focus();
+      returnFocusRef.current = null;
+      return;
+    }
+
+    closeButtonRef.current?.focus();
 
     const onKey = (event) => {
-      if (event.key === "Escape") close();
-      if (event.key === "ArrowRight") step(1);
-      if (event.key === "ArrowLeft") step(-1);
+      if (event.key === "Escape") {
+        close();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        step(1);
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        step(-1);
+      } else if (event.key === "Tab") {
+        const buttons = document.querySelectorAll(
+          ".lightbox button:not(:disabled)",
+        );
+        const first = buttons[0];
+        const last = buttons[buttons.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
 
     const previousOverflow = document.body.style.overflow;
@@ -59,7 +87,10 @@ export default function Gallery() {
               <button
                 type="button"
                 className="gallery-card"
-                onClick={() => setActive(index)}
+                onClick={(event) => {
+                  returnFocusRef.current = event.currentTarget;
+                  setActive(index);
+                }}
                 aria-label={`View ${item.title} ${item.page} screenshot`}
               >
                 <span className="gallery-media">
@@ -99,6 +130,7 @@ export default function Gallery() {
               <button
                 type="button"
                 className="lightbox-close"
+                ref={closeButtonRef}
                 onClick={close}
                 aria-label="Close gallery viewer"
               >
